@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Saver",
+    "version": "0.1.0",
+    "description": "Add a button next to Copy that saves ChatGPT responses to a folder you choose.",
+    "permissions": [
+      "storage",
+      "fileSystem"
+    ],
+    "host_permissions": [
+      "https://chat.openai.com/*"
+    ],
+    "action": {
+      "default_icon": "/icons/icon.png",
+      "default_title": "ChatGPT Saver"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
