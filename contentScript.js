@@ -16,7 +16,6 @@ function initializeObserver() {
 
   const observer = new MutationObserver((mutations) => {
     let shouldProcess = false;
-
     // Check if any added nodes contain chat messages
     for (const mutation of mutations) {
       if (mutation.addedNodes.length > 0) {
