@@ -13,6 +13,7 @@ function initializeObserver() {
   processExistingMessages();
 
   // Then set up observer for new messages
+
   const observer = new MutationObserver((mutations) => {
     let shouldProcess = false;
 
